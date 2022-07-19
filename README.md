@@ -1,2 +1,2 @@
 # PipelinePractice
-project to practice DevOps
+project to practice DevOps, Sweet!
