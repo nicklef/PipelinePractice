@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git 'https://github.com/nicklef/PipelinePractice.git'
+                //git 'https://github.com/nicklef/PipelinePractice.git'
 
                 sh 'echo Building...'
             }
@@ -13,6 +13,8 @@ pipeline {
 
             steps {
                 sh 'echo Testing'
+
+                sh 'python3 test.py'
             }
             
         }
