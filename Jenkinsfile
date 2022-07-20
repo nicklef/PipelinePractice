@@ -5,6 +5,8 @@ pipeline {
             steps {
                 //git 'https://github.com/nicklef/PipelinePractice.git'
 
+                sh 'apt-get update'
+                sh 'apt-get install python3'
                 sh 'echo Building...'
             }
         }
