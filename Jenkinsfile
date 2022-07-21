@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                //git 'https://github.com/nicklef/PipelinePractice.git'
+                //git 'https://github.com/nicklef/PipelinePractice.git' 
+                sh 'docker build -t nicklef/new .'
 
                 sh 'echo Building...'
             }
