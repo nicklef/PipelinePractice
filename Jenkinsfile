@@ -15,7 +15,7 @@ pipeline {
             steps {
                 sh 'echo Testing'
 
-                sh 'python3 test.py'
+                sh 'python3 -m pytest test.py'
             }
             
         }
