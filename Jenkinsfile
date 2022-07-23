@@ -26,6 +26,12 @@ pipeline {
 
                 sh "echo Deploy to dockerhub"
 
+                withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'password', usernameVariable: 'username')]) {
+                    sh 'docker login -u ${username} -p ${password}'
+                }
+
+                sh 'docker push nicklef/new:latest'
+
             }
 
         }
