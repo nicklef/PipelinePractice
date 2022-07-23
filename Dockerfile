@@ -9,4 +9,4 @@ COPY . /flask-app/
 
 ENV FLASK_APP=hello
 
-CMD ["flask", "run", "--host=0.0.0.0"]
+CMD ["flask", "run"]
