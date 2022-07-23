@@ -5,7 +5,7 @@ pipeline {
             steps {
                 //git 'https://github.com/nicklef/PipelinePractice.git' 
                 sh 'docker build -t nicklef/new .'
-                sh 'python3-pip install pytest'
+                sh 'pip install pytest'
                 sh 'echo Building...'
             }
         }
