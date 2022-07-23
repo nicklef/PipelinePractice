@@ -7,6 +7,6 @@ RUN  pip install -r requirements.txt
 
 COPY . /flask-app/
 
-RUN export FLASK_APP=hello
+ENV FLASK_APP=hello
 
 CMD ["flask", "run", "--host=0.0.0.0"]
