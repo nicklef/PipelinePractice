@@ -3,10 +3,11 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                //git 'https://github.com/nicklef/PipelinePractice.git' 
+                
+                sh 'echo Building...'
                 sh 'docker build -t nicklef/new .'
                 sh 'pip install pytest'
-                sh 'echo Building...'
+                
             }
         }
 
