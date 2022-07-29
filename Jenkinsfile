@@ -1,9 +1,9 @@
 pipeline {
     agent any
 
-    environment {
-        scannerHome = tool 'SonarScanner 4.0';
-    }
+    // environment {
+    //     scannerHome = tool 'SonarScanner 4.0';
+    // }
 
     stages {
         stage('Build') {
@@ -29,7 +29,7 @@ pipeline {
         stage('SonarQube analysis') {
 
             steps {
-                withSonarQubeEnv('My SonarQube Server') { 
+                withSonarQubeEnv(installationName: 'SonarCloud') { 
                     sh "${scannerHome}/bin/sonar-scanner"
                 }
             }
