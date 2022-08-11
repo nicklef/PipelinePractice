@@ -26,15 +26,15 @@ pipeline {
             
         }
 
-        stage('SonarQube analysis') {
+        // stage('SonarQube analysis') {
 
-            steps {
-                withSonarQubeEnv(installationName: 'SonarCloud') { 
-                    sh "${scannerHome}/bin/sonar-scanner"
-                }
-            }
+        //     steps {
+        //         withSonarQubeEnv(installationName: 'SonarCloud') { 
+        //             sh "${scannerHome}/bin/sonar-scanner"
+        //         }
+        //     }
             
-        }
+        // }
 
         stage('Deploy') {
 
