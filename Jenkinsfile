@@ -11,7 +11,7 @@ pipeline {
                 
                 sh 'echo Building...'
                 sh 'docker build -t nicklef/new .'
-                sh 'pip install pytest'
+                // sh 'pip install pytest'
                 
             }
         }
@@ -21,7 +21,7 @@ pipeline {
             steps {
                 sh 'echo Testing'
 
-                sh 'python3 -m pytest test.py'
+                // sh 'python3 -m pytest test.py'
             }
             
         }
@@ -36,20 +36,20 @@ pipeline {
             
         // }
 
-        stage('Deploy') {
+        // stage('Deploy') {
 
-            steps {
+        //     steps {
 
-                sh "echo Deploy to dockerhub"
+        //         sh "echo Deploy to dockerhub"
 
-                withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'password', usernameVariable: 'username')]) {
-                    sh 'docker login -u ${username} -p ${password}'
-                }
+        //         withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'password', usernameVariable: 'username')]) {
+        //             sh 'docker login -u ${username} -p ${password}'
+        //         }
 
-                sh 'docker push nicklef/new:latest'
+        //         sh 'docker push nicklef/new:latest'
 
-            }
+        //     }
 
-        }
+        // }
     }
 }
