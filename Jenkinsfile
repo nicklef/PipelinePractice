@@ -11,7 +11,7 @@ pipeline {
                 
                 sh 'echo Building...'
                 sh 'docker build -t nicklef/new .'
-                // sh 'pip install pytest'
+                sh 'pip install pytest'
                 
             }
         }
